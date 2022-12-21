@@ -1,1 +1,2 @@
 # digitalClock
+Simole Digital Clock
