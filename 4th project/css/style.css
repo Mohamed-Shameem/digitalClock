@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: digital-7;
+  src: url(./digital-7/digital-7.ttf);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  background-color: black;
+  font-family: serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  user-select: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------days----------months-------------------- */
+
+.days,
+.month {
+  width: 800px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.384);
+  font-size: 20px;
+}
+
+.days span,
+.month span {
+  width: 80px;
+  text-align: center;
+}
+
+/* -----------------date------------------ */
+
+.date {
+  width: 250px;
+  height: 50px;
+  font-family: digital-7;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 4px;
+  color: goldenrod;
+}
+
+.days-active {
+  color: goldenrod !important;
+}
+
+/* ------------------clock------------------------ */
+
+.clock {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  font-family: digital-7;
+  font-weight: 500;
+  color: red;
+}
+
+/* -----------------colon */
+
+.colon {
+  width: 40px;
+  height: 100px;
+  text-align: center;
+  animation: blink 1000ms ease infinite;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+}
+
+.num {
+  width: 50px;
+  height: 100px;
+  position: relative;
+  text-align: right;
+}
+
+.num::before {
+  content: "8";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(113, 128, 147, 0.1);
+}
+
+.amORpm span {
+  display: block;
+  width: 40px;
+  height: 25px;
+  font-size: 25px;
+  text-align: center;
+  color: rgba(113, 128, 147, 0.1);
+}
+
+.active {
+  color: red !important;
+}
+
+@media (max-width: 540px) {
+  /* --------------------days ---- months */
+  .days,
+  .month {
+    width: 350px;
+    height: 30px;
+    font-size: 8px;
+  }
+
+  .days span {
+    width: 28px;
+    text-align: center;
+  }
+  .month span {
+    width: 30px;
+    text-align: center;
+  }
+  /* --------------------------------date */
+  .date {
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  /* -------------------------------clock */
+  .clock {
+    width: 170px;
+    height: 50px;
+    font-size: 40px;
+  }
+
+  .colon {
+    width: 20px;
+    height: 40px;
+    text-align: center;
+  }
+  .num {
+    width: 30px;
+    height: 40px;
+    position: relative;
+    text-align: right;
+  }
+
+  .num::before {
+    content: "8";
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgba(113, 128, 147, 0.1);
+  }
+
+  .amORpm span {
+    width: 20px;
+    height: 14px;
+    font-size: 12px;
+  }
+}
